@@ -1,0 +1,29 @@
+{
+  "status": "SUCCESS",
+  "document_type": "balance_sheet",
+  "document_name": "sample_balance_sheet.pdf",
+  "extracted_data": {
+    "financial_data": {
+      "total_assets": "1000000",
+      "total_liabilities": "1000000",
+      "total_equity": null,
+      "cash_and_cash_equivalents": null
+    }
+  },
+  "validation": {
+    "status": "valid",
+    "checks": [
+      {
+        "formula": "Total Assets = Total Liabilities",
+        "operands": {
+          "total_assets": 1000000,
+          "total_liabilities": 1000000
+        },
+        "calculated_value": 1000000,
+        "reported_value": 1000000,
+        "variance": 0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

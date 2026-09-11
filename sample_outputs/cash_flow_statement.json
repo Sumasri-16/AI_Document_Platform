@@ -1,0 +1,33 @@
+{
+  "status": "SUCCESS",
+  "document_type": "cash_flow_statement",
+  "document_name": "Consolidated Cash Flow Statement 2017.pdf",
+  "extracted_data": {
+    "financial_data": {
+      "cash_and_cash_equivalents": "493111196",
+      "cash_from_operating_activities": "172815931",
+      "cash_from_investing_activities": "-8655510",
+      "cash_from_financing_activities": "-58929743",
+      "net_cash_change": "102422381",
+      "opening_cash": "390688815",
+      "closing_cash": "493111196"
+    }
+  },
+  "validation": {
+    "status": "valid",
+    "checks": [
+      {
+        "formula": "Opening Cash + Net Cash Change = Closing Cash",
+        "operands": {
+          "opening_cash": 390688815,
+          "net_cash_change": 102422381,
+          "closing_cash": 493111196
+        },
+        "calculated_value": 493111196,
+        "reported_value": 493111196,
+        "variance": 0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

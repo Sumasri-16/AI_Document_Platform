@@ -1,0 +1,27 @@
+{
+  "status": "SUCCESS",
+  "document_type": "invoice",
+  "document_name": "sample_invoice.pdf",
+  "extracted_data": {
+    "invoice_number": "INV-001",
+    "date": "2026-09-10",
+    "time": null,
+    "total_amount": "12500",
+    "items": []
+  },
+  "validation": {
+    "status": "valid",
+    "checks": [
+      {
+        "formula": "Invoice total exists",
+        "operands": {
+          "total": 12500
+        },
+        "calculated_value": 12500,
+        "reported_value": 12500,
+        "variance": 0,
+        "status": "PASS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "status": "SUCCESS",
+  "document_type": "profit_and_loss",
+  "document_name": "Consolidated Profit & Loss 2017.pdf",
+  "extracted_data": {
+    "financial_data": {
+      "interest_earned": "732713529",
+      "other_income": "128776329",
+      "interest_expended": "380415844",
+      "operating_expenses": "207510707",
+      "provisions_and_contingencies": "120689285",
+      "total_income": "743732155",
+      "total_expenditure": "708615836",
+      "net_profit_for_year": "152874022",
+      "net_profit": "152874022",
+      "profit": "152874022"
+    }
+  },
+  "validation": {
+    "status": "valid_with_warnings",
+    "checks": [
+      {
+        "formula": "Total Income - Total Expenditure = Net Profit",
+        "operands": {
+          "total_income": 743732155,
+          "total_expenditure": 708615836,
+          "net_profit": 152874022
+        },
+        "calculated_value": 35116319,
+        "reported_value": 152874022,
+        "variance": -117757703,
+        "status": "FAIL"
+      }
+    ]
+  }
+}

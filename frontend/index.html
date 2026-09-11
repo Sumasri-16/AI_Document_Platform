@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Extraction Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div>
+        <h1>AI Document Extraction Platform</h1>
+        <p>AI-powered financial document extraction, validation and storage</p>
+    </div>
+
+    <div class="status">
+        <span id="statusDot"></span>
+        <span id="statusText">Checking API...</span>
+    </div>
+</header>
+
+<main>
+
+    <!-- Upload Section -->
+    <section class="card">
+        <h2>Process Document</h2>
+
+        <div class="form-group">
+            <label for="documentType">Document Type</label>
+
+            <select id="documentType">
+                <option value="">Select document type</option>
+                <option value="invoice">Invoice</option>
+                <option value="balance_sheet">Balance Sheet</option>
+                <option value="profit_and_loss">Profit & Loss</option>
+                <option value="cash_flow_statement">Cash Flow Statement</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fileInput">Upload Document</label>
+
+            <input
+                type="file"
+                id="fileInput"
+                accept=".pdf,.jpg,.jpeg,.png"
+            >
+        </div>
+
+        <button id="processBtn" onclick="processDocument()">
+            Extract & Process
+        </button>
+
+        <p id="message"></p>
+    </section>
+
+
+    <!-- Current Result -->
+    <section class="card" id="resultSection" style="display:none;">
+
+        <h2>Extraction Result</h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <span>Document</span>
+                <strong id="resultDocument">-</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Document Type</span>
+                <strong id="resultType">-</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Status</span>
+                <strong id="resultStatus">-</strong>
+            </div>
+
+            <div class="info-box">
+                <span>Processing Time</span>
+                <strong id="processingTime">-</strong>
+            </div>
+
+        </div>
+
+        <h3>Extracted Data</h3>
+
+        <pre id="extractedData"></pre>
+
+        <h3>Validation</h3>
+
+        <pre id="validationData"></pre>
+
+        <h3>Raw OCR Text</h3>
+
+        <pre id="rawText"></pre>
+
+    </section>
+
+
+    <!-- Dashboard -->
+    <section class="card">
+
+        <div class="dashboard-header">
+            <div>
+                <h2>Processed Documents</h2>
+                <p>Documents stored in the database</p>
+            </div>
+
+            <button onclick="loadDocuments()">
+                Refresh
+            </button>
+        </div>
+
+        <div id="documentsContainer">
+            <p>Loading documents...</p>
+        </div>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>
