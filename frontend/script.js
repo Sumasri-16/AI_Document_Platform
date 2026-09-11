@@ -1,4 +1,4 @@
-const API_BASE = "http://127.0.0.1:8000/api/v1";
+const API_BASE = "https://ai-document-platform-k3k2.onrender.com/api/v1";
 
 
 // =====================================================
